@@ -1,16 +1,19 @@
 # TodoList-Javascript
-Kodluyoruz FrontEnd Web Geliştirme kursu kapsamında, HTML ve CSS kodları hazır verilmiş olan bir To-Do List projesini Javascript kullanarak dinamik hale getirmeye çalıştım.
+Kodluyoruz As part of the FrontEnd Web Development course, I tried to make a To-Do List project dynamic using Javascript, for which HTML and CSS codes were already given.
 -----------
 
-+ Projede yapılması gerekilenler 
-  * Listeye boş karakter eklenemiyor. Bununla birlikte hiçbir şey yazılmadığında da aynı hatayı veriyor.
-  * Yazacağınız JavaScript kodu içerisinde element eklemeyi sağlayan bir fonksiyon, element silmeyi sağlayan bir fonksiyon, yapıldı işaretlenmesini sağlayan bir fonksiyon olması gerekiyor.
-  * Element eklendiğinde ve hata verirken sağ üstte uyarı verdiğini fark etmişsinizdir. Bunu sağlayan Bootstrap Toast bildirimdir. Sayfaya gidip toast nedir nasıl yapılır bunu araştırın ve kodunuza ekleyin.
-  * Önce ana fonksiyonlar için uğraşın. Yapıldı, toast bildirim bunlar biraz daha için artistliği. Öncelikli amacını sağlıyor olması lazım.
-  * Yazdığınız js dosyasını projenize eklemeyi unutmayın.
-+ İlk olarak terminale git clone yazarak projemi klonlayabilirsiniz.
++ What to do in the project
+   * Unable to add null characters to the list. However, it gives the same error when nothing is written.
+   * In the JavaScript code you will write, there must be a function that allows adding elements, a function that allows deleting elements, and a function that allows marking done.
+   * You may have noticed that when the element is added and it gives an error, it gives a warning at the top right. It's the Bootstrap Toast manifest that enables it. Go to the page and research how toast is done and add it to your code.
+   * Go for the main functions first. Done, toast notification these are for some more artistry. It must fulfill its primary purpose.
+   * Do not forget to add the js file you wrote to your project.
 
------------
+---------
+
++ First, you can clone my project by typing git clone in the terminal.
+
+
 
 ````
 git clone https://github.com/beeyzaozer/TodoList-Javascript
@@ -21,8 +24,8 @@ git clone https://github.com/beeyzaozer/TodoList-Javascript
 
 -----------
 
-+ List id'li ul etiketimizin içine li elementlerini eklememiz gerekiyor. Önce items isimli boş bir array oluşturuyoruz. Daha sonra CreateItem fonksiyonu içinde dinamik olarak li elementi oluşturuyoruz.
-+ Oluşturduğumuz elementi x butonuna tıklandığında silmemizi sağlayan function 
++ We need to add li elements inside our ul tag with + List id. First we create an empty array named items. Then we create the li element dynamically within the CreateItem function.
++ Function that allows us to delete the element we created when the x button is clicked.
 
 ````
 span.onclick = () => {
@@ -33,7 +36,7 @@ span.onclick = () => {
 -----------
 
 
-+ Li elementinin üstüne tıklandığında üzerini çizmemizi sağlayan function. Burada aslında gizli olan classListi toogle ile görünür hale getiriyoruz.
++ A function that allows us to cross out the Li element when clicked. Here we make the hidden classList visible with toogle.
 
 ````
 listBox.addEventListener("click", (item)  => {
@@ -49,7 +52,7 @@ listBox.addEventListener("click", (item)  => {
 ----------------------
 
 
-+ ForEach methodu ile oluşturduğumuz her li elemanını arrayimize döndürüyoruz.
++ We return every li element we created with the ForEach method to our array.
 
 ````
 items.forEach((item) => {
@@ -60,7 +63,7 @@ items.forEach((item) => {
 
 -----------
 
-+ Inputa girilen değeri aldığımız function. Aynı zamanda inputa girilen değerin boş olup olmadığını kontrol ediyor.
++ The function where we get the value entered in the input. At the same time, it checks whether the value entered in the input is empty.
 
 ````
   if (item.value === "" || item.value === " ") { // if item is empty, show toast error message
