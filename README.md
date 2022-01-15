@@ -16,7 +16,7 @@ Kodluyoruz As part of the FrontEnd Web Development course, I tried to make a To-
 
 
 ````
-git clone https://github.com/beeyzaozer/TodoList-Javascript
+git clone https://github.com/beeyzaozer/TodoList-Javascript.git
 
 ````
 
